@@ -1,2 +1,2 @@
 # network-lab
-Archivos y practicas sobre mis test sobre redes
+Archivos y practicas sobre mis test de redes

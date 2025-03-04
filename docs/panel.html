@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/docs/styles/style_panel.css">
+  <title>Mini Panel del Laboratorio de Redes</title>
+</head>
+<body>
+  <h1>Mini Panel del Laboratorio de Redes</h1>
+  <button id="mostrarEstado">Mostrar Estado del Servidor dnsmasq</button>
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById("mostrarEstado").addEventListener("click", function() {
+      fetch("/test/estado_dnsmasq.sh")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("resultado").textContent = data;
+        });
+    });
+  </script>
+</body>
+</html>
