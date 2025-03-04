@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Start dnsmasq
+Exec=gnome-terminal -- /home/SGAnetwork/Desktop/network-lab/Escenario1-PortForwarding/start_dnsmasq.sh
+Terminal=true

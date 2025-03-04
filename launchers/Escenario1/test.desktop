@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Test
+Exec=xterm -e echo "Funciona"
+Terminal=true

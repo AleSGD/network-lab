@@ -13,7 +13,7 @@
 
   <script>
     document.getElementById("mostrarEstado").addEventListener("click", function() {
-      fetch("/test/estado_dnsmasq.sh")
+      fetch("/scripts/check_dnsmasq.sh")
         .then(response => response.text())
         .then(data => {
           document.getElementById("resultado").textContent = data;
