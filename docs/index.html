@@ -7,6 +7,13 @@
   <body>
 	  <h1>Avances en el Laboratorio de Redes</h1>
 	  <p>Aqui encontraras mis proyectos y escenarios de practica en el laboratorio de redes</p>
+
+	  <h2>Panel de control</h2>
+	  <iframe src="panel.html" frameborder="0"></iframe>
+
+	  <h2>Guia Visual</h2>
+	  <iframe src="vislab.html" frameborder="0"></iframe>
+	  
 	  <h2>Escenarios</h2>
 	  <ul>
 		  <li><a href="#">Escenario 1: Configuracion de dnsmasq</a></li>
@@ -14,5 +21,25 @@
 		  <li><a href="#">Escenario 3: Configuracion de iptables</a></li>
 		  <li><a href="#">Escenario 4: Pruebas con router</a></li>
 	  </ul>
+
+	  <div id="logs"></div>
   </body>
+
+  <script>
+	const socket = new WebSocket('ws://localhost:8080');
+
+	socket.onmessage = event => {
+		const log = document.createElement('p');
+		log.textContent = event.data;
+		document.getElementById('logs').appendChild(log);
+	};
+
+	socket.onopen = () => {
+		console.log('Conexion websocket abierta');
+	};
+
+	socket.onclose = () => {
+		console.log('Conexion websocket cerrada');
+	};
+  </script>
 </html>

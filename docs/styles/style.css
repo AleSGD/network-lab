@@ -7,6 +7,11 @@ h1,h2{
   color: #333;
 }
 
+iframe{
+  width: 800px;
+  height: 600px;
+}
+
 ul{
   list-style-type: none;
   padding: 0;
